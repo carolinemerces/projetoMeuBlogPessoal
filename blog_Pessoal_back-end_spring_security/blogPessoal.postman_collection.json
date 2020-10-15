@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "2676d41e-e349-4ed7-905a-fdb83f30b810",
+		"name": "blogPessoal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Postagens",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWVyY2VzOnRlc3Rl",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/postagens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens"
+							]
+						},
+						"description": "http://localhost:8080/postagens"
+					},
+					"response": []
+				},
+				{
+					"name": "GET ID - FIND BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postagens/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens",
+								"1"
+							]
+						},
+						"description": "http://localhost:8080/postagens/1"
+					},
+					"response": []
+				},
+				{
+					"name": "GET TITULO - FIND BY TITULO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postagens/titulo/api",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens",
+								"titulo",
+								"api"
+							]
+						},
+						"description": "http://localhost:8080/postagens/titulo/api"
+					},
+					"response": []
+				},
+				{
+					"name": "POST - POSTAGEM (INSERT)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Informática\",\r\n    \"texto\": \"Informática também faz parte da área de Tecnologia!\",\r\n    \"tema\":{\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postagens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens"
+							]
+						},
+						"description": "http://localhost:8080/postagens"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - POSTAGEM (UPDATE)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"id\": 1,\r\n    \"titulo\": \"Aula de API Rest\",\r\n    \"texto\": \"Estamos aprendendo muito!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postagens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens"
+							]
+						},
+						"description": "http://localhost:8080/postagens"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postagens/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postagens",
+								"2"
+							]
+						},
+						"description": "http://localhost:8080/postagens/2"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Temas",
+			"item": [
+				{
+					"name": "POST - TEMA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\": \"Culinária\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tema",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tema"
+							]
+						},
+						"description": "http://localhost:8080/tema"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - FINDALL TEMA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tema",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tema"
+							]
+						},
+						"description": "http://localhost:8080/tema"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - FINDBYID TEMA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tema/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tema",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - FINDBYNAME TEMA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tema/nome/esporte",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tema",
+								"nome",
+								"esporte"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - TEMA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"descricao\": \"Esporte\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tema/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tema",
+								""
+							]
+						},
+						"description": "http://localhost:8080/tema/"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - TEMA",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tema/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tema",
+								"3"
+							]
+						},
+						"description": "http://localhost:8080/tema/3"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "POST -  CADASTRAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Caroline das Mercês\",\r\n    \"usuario\":\"merces\",\r\n    \"senha\":\"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios/cadastrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"cadastrar"
+							]
+						},
+						"description": "http://localhost:8080/usuarios/cadastrar"
+					},
+					"response": []
+				},
+				{
+					"name": "POST - LOGAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\":\"merces\",\r\n    \"senha\":\"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios/logar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"logar"
+							]
+						},
+						"description": "http://localhost:8080/usuarios/logar"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
